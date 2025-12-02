@@ -101,7 +101,7 @@ tempOut <- lapply(blockIn, function(x){
 })
 
 # remove blocks with less than numPresent aligned lineages
-tempOut <- tempOut[lenBlock > numPresent]
+tempOut <- tempOut[lenBlock >= numPresent]
 
 # holder for the concatentaed sequence
 # blocks are being concatenated by linage
@@ -139,3 +139,4 @@ for(i in 1:length(seqCon)){
                  seqCon[[i]]), collapse = ""), 
         outputPath, append = T)  
 }
+
